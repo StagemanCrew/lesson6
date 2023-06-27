@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-7</title>
+</head>
+<body>
+    <h1>Вивести на екран послідовність символів: <br> а о а о а о а о а о … <br> Всього символів 82.</h1>
+
+    <script>
+        // Вводимо дані
+        const eventSymbol = 'o';
+        const oddSymbol = 'a';
+        let symbols = '';
+
+        // Знаходимо результат
+        for (let i = 1; i <= 82; i++) {
+            if(i % 2 === 0)
+                symbols += eventSymbol + '&nbsp';
+            else 
+                symbols += oddSymbol + '&nbsp';
+        }
+
+        // Виводимо результат
+        document.write(`<h3>${symbols}</h3>`);
+
+    </script>
+</body>
+</html>

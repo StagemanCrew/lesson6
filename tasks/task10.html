@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-10</title>
+</head>
+<body>
+    <h1>1.Вивести на екран усі двоцифрові числа, у яких перша цифра є більшою або рівною за другу.<br> 2.Вивести на екран усі трицифрові числа, у яких перша цифра є більшою або рівною за суму другої і третьої.</h1>
+
+    <script>
+        document.write('<h2>1</h2>')
+        for (let a1 = 1; a1 <= 9; a1++) {
+            for (let a2 = 1; a2 <= 9; a2++) {
+                if (a1 >= a2) document.write(`${a1}${a2}, `);
+            }
+            
+        }
+        document.write(`<br>`)
+        //=====================================================
+        document.write('<h2>2</h2>')
+        for (let b1 = 1; b1 <= 9; b1++) {
+            for (let b2 = 1; b2 <= 9; b2++) {
+                for (let b3 = 1; b3 <= 9; b3++) {
+                    if (b1 >= (b2 + b3)) document.write(`${b1}${b2}${b3}, `);
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

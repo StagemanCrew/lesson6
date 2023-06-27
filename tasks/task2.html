@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-2</title>
+</head>
+<body>
+    <h1>Відобразити трикутник за допомогою символів «O»</h1>
+
+    <script>
+        // Вводимо даннi
+        const letter = 'O';
+        const spaces = '.';
+        const quantityRows = parseInt(prompt('Введiть кiлькiсть рядкiв трикутника.'));
+
+        // Знаходимо результат
+        document.write('<div style="border: 2px solid black; padding: 0 20px;">');
+            for (let i = 1; i <= quantityRows; i++) {
+                const row = letter.repeat(i);
+                document.write(`<h3> ${row} </h3>`)
+            }
+        document.write('</div>')
+        document.write('<br>')
+
+//==============================================================
+
+        // Знаходимо результат
+        document.write('<div style="border: 2px solid black; padding: 0 20px;">');
+            for (let i = quantityRows; i >= 1; i--) {
+                const row = letter.repeat(i);
+                document.write(`<h3> ${row} </h3>`)
+            }
+        document.write('</div>')
+        document.write('<br>')
+
+//==============================================================
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
