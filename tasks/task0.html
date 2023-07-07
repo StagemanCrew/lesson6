@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-0</title>
+</head>
+<body>
+    <h1>Вивести на екран: <br> 
+        A B C D E <br> 
+        B C D E F <br> 
+        C D E F G <br> 
+        D E F G H <br> 
+        E F G H I 
+    </h1>
+
+    <script>
+        // 1. Вводимо дані
+        document.write(`<div style="font-size: 2em; font-weight: 600;">`);
+        // 2. Знаходимо результат
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                const currentChar = String.fromCharCode(65 + i + j);
+                document.write(`${currentChar} `);
+            }
+            document.write(`<br>`);
+        }
+        document.write(`</div>`);
+        // 3. Виводимо результат
+
+    </script>
+</body>
+</html>

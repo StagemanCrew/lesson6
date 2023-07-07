@@ -13,10 +13,10 @@
     <script>
 
         const rangeEnd = parseInt(prompt('Введите число.'));
-        
         for (let i = 1; i <= rangeEnd; i++) {
             let num = '';
-            for (let j = 1; j <= i * i; j++) {
+            let step = i * i
+            for (let j = 1; j <= step; j++) {
                 num += j;
             }
             document.write(`<h2>${i} ${num}<br></h2>`);

@@ -6,10 +6,18 @@
     <title>task-11</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>Написати програму виведення на екран кожного символу латинського алфавіту та поруч з кожним з них символу, що передує йому та що слідує за ним.</h1>
 
     <script>
-        
+        //1.Вводимо даннi
+
+        for (let i = 97; i <= 122; i++) {
+            const currentChar = String.fromCharCode(i);
+            let prevChar = i === 97 ? '&nbsp;' : String.fromCharCode(i - 1);
+            let nextChar = i === 122 ? '&nbsp;' : String.fromCharCode(i + 1);
+
+        document.write(`<div style="font-size: 16px; font-weight: 600;">${prevChar} ${currentChar} ${nextChar} <br></div>`);
+        }
 
     </script>
 </body>

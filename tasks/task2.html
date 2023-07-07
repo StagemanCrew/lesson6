@@ -9,9 +9,9 @@
     <h1>Відобразити трикутник за допомогою символів «O»</h1>
 
     <script>
+
         // Вводимо даннi
         const letter = 'O';
-        const spaces = '.';
         const quantityRows = parseInt(prompt('Введiть кiлькiсть рядкiв трикутника.'));
 
         // Знаходимо результат
@@ -20,6 +20,19 @@
                 const row = letter.repeat(i);
                 document.write(`<h3> ${row} </h3>`)
             }
+        document.write('</div>')
+        document.write('<br>')
+
+//==============================================================
+
+        // Знаходимо результат
+        document.write('<div style="border: 2px solid black; padding: 0 20px; display: flex;">');
+            document.write('<div style="text-align: center; display: block;">');
+            for (let i = 1; i <= quantityRows; i++) {
+                const row = letter.repeat(i);
+                document.write(`<h3> ${row} </h3>`)
+            }
+            document.write('</div>')
         document.write('</div>')
         document.write('<br>')
 
@@ -36,13 +49,18 @@
 
 //==============================================================
 
-
-
-
-
+        // Знаходимо результат
+        document.write('<div style="border: 2px solid black; padding: 0 20px; display: flex;">');
+            document.write('<div style="text-align: center; display: block;">');
+            for (let i = quantityRows; i >= 1; i--) {
+                const row = letter.repeat(i);
+                document.write(`<h3> ${row} </h3>`)
+            }
+            document.write('</div>')
+        document.write('</div>')
+        document.write('<br>')
 
     </script>
-
 
 </body>
 </html>

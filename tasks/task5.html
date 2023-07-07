@@ -6,14 +6,25 @@
     <title>task-5</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>Інвестор вклав S тис. грн на 20 років під 20% річних, податок складає 5% від суми прибутку. Визначити за допомогою циклів суму, яку він одержить.</h1>
 
     <script>
         // 1. Вводимо дані
-    
+        const userInvest = parseFloat(prompt('Введіть сумму яку ви вклали.'))
+        const tax = 20
+        const vat = 5
+
         // 2. Знаходимо результат
-    
+        let sumTax = 0
+        let taxOfYear = userInvest * (tax - vat) / 100;
+        for (let i = 0; i < 20; i++) {
+            sumTax += taxOfYear
+        }
+        let totalInvest = userInvest + sumTax
         // 3. Виводимо результат
+        document.write(`<h2> 
+            ${userInvest}грн. на 20 років, під 20% річних та НДС 5%, інвестор одержить: ${totalInvest} грн.(Де ${sumTax}грн. це % ) <br>
+            </h2>`)
 
     </script>
 </body>

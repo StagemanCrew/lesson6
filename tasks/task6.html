@@ -6,18 +6,35 @@
     <title>task-6</title>
 </head>
 <body>
-    <h1>Написати програму виведення на екран кожного символу латинського алфавіту та поруч з кожним з них символу, що передує йому та що слідує за ним.</h1>
+    <h1>Інвестор вклав S тис. грн на 20 років під 20% річних, а потім на 17 років під 27% річних. Визначити за допомогою циклів суму, яку він одержить.</h1>
 
     <script>
-        //1.Вводимо даннi
 
-        for (let i = 97; i <= 122; i++) {
-            const currentChar = String.fromCharCode(i);
-            let prevChar = i === 97 ? '&nbsp;' : String.fromCharCode(i - 1);
-            let nextChar = i === 122 ? '&nbsp;' : String.fromCharCode(i + 1);
+        // 1. Вводимо дані
+        const userInvest = parseFloat(prompt('Введіть суму, яку ви вклали:'))
+        const tax = 20
+        const nextTax = 27
 
-        document.write(`${prevChar} ${currentChar} ${nextChar} <br>`);
+        // 2. Знаходимо результат
+        let sumTax = 0
+        let taxOfYear = userInvest * tax / 100;
+        for (let i = 0; i < 20; i++) {
+            sumTax += taxOfYear
         }
+        let totalInvest = userInvest + sumTax
+
+        sumTax = 0;
+        taxOfYear = userInvest * nextTax / 100;
+        for (let j = 0; j < 17; j++) {
+            sumTax += taxOfYear
+        }
+        totalInvest += sumTax; // Додати суму наступного циклу до загальної суми
+
+        // 3. Виводимо результат
+        document.write(`<h2> 
+            ${userInvest} грн. на 20 років під 20% річних, та ${nextTax}% річних наступних 17 років, <br>
+            інвестор одержить: ${totalInvest.toFixed(2)} грн.
+        </h2>`)
 
     </script>
 </body>
